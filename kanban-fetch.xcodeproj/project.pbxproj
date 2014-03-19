@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D567964183DF93F007D17AB /* JROmniFocus.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D567963183DF93F007D17AB /* JROmniFocus.m */; };
 		3D641CDE183A0D480097FCEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D641CDD183A0D480097FCEB /* Foundation.framework */; };
 		3D641CE1183A0D480097FCEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D641CE0183A0D480097FCEB /* main.m */; };
 		3D641CE5183A0D480097FCEB /* kanban_fetch.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D641CE4183A0D480097FCEB /* kanban_fetch.1 */; };
+		3D641CEE183A0D9B0097FCEB /* JRProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D641CED183A0D9B0097FCEB /* JRProject.m */; };
+		3D641CF6183A0FE90097FCEB /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D641CF5183A0FE90097FCEB /* ScriptingBridge.framework */; };
+		3DE0E7F8183AA0BE00DB752B /* JRDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE0E7F7183AA0BE00DB752B /* JRDatabaseManager.m */; };
+		D06866BA4282437F836F0040 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 642F951E960F4A7B9B391891 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,11 +31,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3D567962183DF93F007D17AB /* JROmniFocus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JROmniFocus.h; sourceTree = "<group>"; };
+		3D567963183DF93F007D17AB /* JROmniFocus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JROmniFocus.m; sourceTree = "<group>"; };
 		3D641CDA183A0D480097FCEB /* kanban-fetch */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "kanban-fetch"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D641CDD183A0D480097FCEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3D641CE0183A0D480097FCEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3D641CE3183A0D480097FCEB /* kanban-fetch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kanban-fetch-Prefix.pch"; sourceTree = "<group>"; };
 		3D641CE4183A0D480097FCEB /* kanban_fetch.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = kanban_fetch.1; sourceTree = "<group>"; };
+		3D641CEB183A0D900097FCEB /* OmniFocus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OmniFocus.h; sourceTree = "<group>"; };
+		3D641CEC183A0D9B0097FCEB /* JRProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRProject.h; sourceTree = "<group>"; };
+		3D641CED183A0D9B0097FCEB /* JRProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRProject.m; sourceTree = "<group>"; };
+		3D641CF5183A0FE90097FCEB /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		3DE0E7F4183A9EAC00DB752B /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3DE0E7F6183AA0BE00DB752B /* JRDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRDatabaseManager.h; sourceTree = "<group>"; };
+		3DE0E7F7183AA0BE00DB752B /* JRDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRDatabaseManager.m; sourceTree = "<group>"; };
+		642F951E960F4A7B9B391891 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D28D50B670F54A8CB1278C7A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = "kanban-fetch/Pods/Pods.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D641CF6183A0FE90097FCEB /* ScriptingBridge.framework in Frameworks */,
 				3D641CDE183A0D480097FCEB /* Foundation.framework in Frameworks */,
+				D06866BA4282437F836F0040 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +69,7 @@
 				3D641CDF183A0D480097FCEB /* kanban-fetch */,
 				3D641CDC183A0D480097FCEB /* Frameworks */,
 				3D641CDB183A0D480097FCEB /* Products */,
+				D28D50B670F54A8CB1278C7A /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,7 +84,9 @@
 		3D641CDC183A0D480097FCEB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D641CF5183A0FE90097FCEB /* ScriptingBridge.framework */,
 				3D641CDD183A0D480097FCEB /* Foundation.framework */,
+				642F951E960F4A7B9B391891 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -73,9 +94,11 @@
 		3D641CDF183A0D480097FCEB /* kanban-fetch */ = {
 			isa = PBXGroup;
 			children = (
+				3DE0E7F5183AA06100DB752B /* Support files */,
 				3D641CE0183A0D480097FCEB /* main.m */,
 				3D641CE4183A0D480097FCEB /* kanban_fetch.1 */,
 				3D641CE2183A0D480097FCEB /* Supporting Files */,
+				3DE0E7F4183A9EAC00DB752B /* Podfile */,
 			);
 			path = "kanban-fetch";
 			sourceTree = "<group>";
@@ -83,9 +106,23 @@
 		3D641CE2183A0D480097FCEB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3D641CEB183A0D900097FCEB /* OmniFocus.h */,
 				3D641CE3183A0D480097FCEB /* kanban-fetch-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3DE0E7F5183AA06100DB752B /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				3D641CEC183A0D9B0097FCEB /* JRProject.h */,
+				3D641CED183A0D9B0097FCEB /* JRProject.m */,
+				3DE0E7F6183AA0BE00DB752B /* JRDatabaseManager.h */,
+				3DE0E7F7183AA0BE00DB752B /* JRDatabaseManager.m */,
+				3D567962183DF93F007D17AB /* JROmniFocus.h */,
+				3D567963183DF93F007D17AB /* JROmniFocus.m */,
+			);
+			name = "Support files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D641CE8183A0D480097FCEB /* Build configuration list for PBXNativeTarget "kanban-fetch" */;
 			buildPhases = (
+				5DC14A4883774F1CA0D75B63 /* Check Pods Manifest.lock */,
 				3D641CD6183A0D480097FCEB /* Sources */,
 				3D641CD7183A0D480097FCEB /* Frameworks */,
 				3D641CD8183A0D480097FCEB /* CopyFiles */,
+				2F363C1572B74767A36489C9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,12 +173,48 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2F363C1572B74767A36489C9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/kanban-fetch/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DC14A4883774F1CA0D75B63 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3D641CD6183A0D480097FCEB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D641CEE183A0D9B0097FCEB /* JRProject.m in Sources */,
+				3DE0E7F8183AA0BE00DB752B /* JRDatabaseManager.m in Sources */,
 				3D641CE1183A0D480097FCEB /* main.m in Sources */,
+				3D567964183DF93F007D17AB /* JROmniFocus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +291,7 @@
 		};
 		3D641CE9183A0D480097FCEB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D28D50B670F54A8CB1278C7A /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kanban-fetch/kanban-fetch-Prefix.pch";
@@ -225,6 +301,7 @@
 		};
 		3D641CEA183A0D480097FCEB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D28D50B670F54A8CB1278C7A /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kanban-fetch/kanban-fetch-Prefix.pch";
@@ -251,6 +328,7 @@
 				3D641CEA183A0D480097FCEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
