@@ -34,7 +34,7 @@ int main(int argc, const char * argv[])
         SBElementArray *allProjects = [JROmniFocus projects];
         NSMutableArray *kbProjects = [NSMutableArray arrayWithCapacity:[allProjects count]];
     
-        for (OmniFocusProject *p in allProjects) {
+        for (OmniFocus2Project *p in allProjects) {
             JRProject *kbp = [JRProject projectWithProject:p];
             if ([kbp isReportable])
                 [kbProjects addObject: kbp];

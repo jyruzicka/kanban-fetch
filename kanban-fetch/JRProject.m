@@ -3,14 +3,14 @@
 
 @implementation JRProject
 
--(id)initWithProject:(OmniFocusProject *)proj {
+-(id)initWithProject:(OmniFocus2Project *)proj {
   if (self = [super init]) {
     p = proj;
   }
   return self;
 }
 
-+(id)projectWithProject:(OmniFocusProject *)proj {
++(id)projectWithProject:(OmniFocus2Project *)proj {
   return [[self alloc] initWithProject:proj];
 }
 
@@ -18,10 +18,10 @@
 -(int)daysDeferred {
   if (!_daysDeferred) {
     if ([self type] == kJRDeferredProject) {
-        NSDate *start = [[p startDate] get];
+        NSDate *start = [[p deferDate] get];
          //No start date on project, or start date is in the past
         if (!start || [start timeIntervalSinceNow] < 0)
-            start = [[[self tasks][0] startDate] get];
+            start = [[[self tasks][0] deferDate] get];
         
         NSTimeInterval i = [start timeIntervalSinceNow];
         _daysDeferred = i / (60 * 60 * 24);
@@ -76,15 +76,15 @@
 -(BOOL)isCompleted {return p.completed;}
 
 -(BOOL)isDropped {
-  return (p.status == OmniFocusProjectStatusDropped);
+  return (p.status == OmniFocus2ProjectStatusDropped);
 }
 
 -(BOOL)isOnHold {
-  return (p.status == OmniFocusProjectStatusOnHold);
+  return (p.status == OmniFocus2ProjectStatusOnHold);
 }
 
 -(BOOL)isWaiting {
-    for (OmniFocusTask *t in [self availableTasks])
+    for (OmniFocus2Task *t in [self availableTasks])
         if (![[[t.context get] name] isEqualToString:@"Waiting for..."])
             return NO;
     

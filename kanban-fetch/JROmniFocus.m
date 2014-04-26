@@ -7,16 +7,16 @@
 //
 
 #import "JROmniFocus.h"
-#import "OmniFocus.h"
+#import "OmniFocus2.h"
 
-static OmniFocusApplication* kJROF;
+static OmniFocus2Application* kJROF;
 static SBElementArray *kProjects, *kTasks;
 
 @implementation JROmniFocus
 
-+(OmniFocusApplication *)omnifocus {
++(OmniFocus2Application *)omnifocus {
     if (!kJROF)
-        kJROF = [SBApplication applicationWithBundleIdentifier:@"com.omnigroup.omnifocus"];
+        kJROF = [SBApplication applicationWithBundleIdentifier:@"com.omnigroup.omnifocus2"];
     
     return kJROF;
 }
