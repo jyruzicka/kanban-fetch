@@ -7,22 +7,30 @@
 //
 
 #import "JROmniFocus.h"
+
 #import "OmniFocus2.h"
+#import "SystemEvents.h"
 
 static OmniFocus2Application* kJROF;
 static SBElementArray *kProjects, *kTasks;
+static NSString *kOF2ID = @"com.omnigroup.OmniFocus2";
 
 @implementation JROmniFocus
 
 +(OmniFocus2Application *)omnifocus {
     if (!kJROF)
-        kJROF = [SBApplication applicationWithBundleIdentifier:@"com.omnigroup.omnifocus2"];
+        kJROF = [SBApplication applicationWithBundleIdentifier:kOF2ID];
     
     return kJROF;
 }
 
 +(BOOL) isRunning {
-    return [[self omnifocus] isRunning];
+    NSArray *apps = [[NSWorkspace sharedWorkspace] runningApplications];
+    for (NSRunningApplication *app in apps) {
+        if ([app.bundleIdentifier isEqualToString:kOF2ID])
+            return true;
+    }
+    return false;
 }
 
 +(SBElementArray *)projects {
