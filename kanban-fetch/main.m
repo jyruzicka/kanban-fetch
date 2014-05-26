@@ -11,19 +11,36 @@
 #import "JRProject.h"
 #import "JRDatabaseManager.h"
 
+static const NSString *VERSION_NUMBER = @"1.0.0";
+
+void NSPrint(NSString * str,...) {
+    va_list args;
+    va_start(args,str);
+    
+    if (![str hasSuffix:@"\n"]) str = [str stringByAppendingString:@"\n"];
+    
+    NSString *outputString = [[NSString alloc] initWithFormat:str arguments:args];
+    va_end(args);
+    [outputString writeToFile:@"/dev/stdout" atomically:NO encoding:NSUTF8StringEncoding error:nil];
+    
+}
+
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
         NSError *err;
         if (argc != 2) {
-            printf("Usage:\n  kanban-fetch DBPATH\n");
+            NSPrint(@"kanban-fetch Version %@", VERSION_NUMBER);
+            NSPrint(@"Usage:\n  kanban-fetch DBPATH");
             return 1;
         }
 
         //Quit if OmniFocus isn't running
-        if (![JROmniFocus isRunning])
+        if (![JROmniFocus isRunning]) {
+            printf("Omnifocus isn't running. Quitting...");
             return 0;
+        }
             
         //Determine path to write to
         NSString *path = [NSString stringWithCString:argv[1] encoding:NSUTF8StringEncoding];
