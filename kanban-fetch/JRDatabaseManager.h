@@ -11,8 +11,7 @@
 
 @class JRProject;
 
-@interface JRDatabaseManager : NSObject {
-}
+@interface JRDatabaseManager : NSObject
 
 #pragma mark DB accessor method
 +(FMDatabase *)database;

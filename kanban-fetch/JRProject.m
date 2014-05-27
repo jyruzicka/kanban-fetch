@@ -1,6 +1,9 @@
 #import "JRProject.h"
 #import "JROmniFocus.h"
 
+//For exlcluded folders
+NSArray *excludedFolders;
+
 @implementation JRProject
 
 -(id)initWithProject:(OmniFocus2Project *)proj {
@@ -141,7 +144,13 @@
 }
 
 -(BOOL)isReportable {
-    return ([self root] && ![[self root] isEqualToString:@"Recurring Tasks"] && ![[self root] isEqualToString:@"Template"]);
+    if (!self.root) return NO;
+    
+    if (excludedFolders)
+        for (NSString *exclFolder in excludedFolders)
+                if ([self.root isEqualToString:exclFolder]) return NO;
+    
+    return YES;
 }
 
 #pragma mark - Serialization
@@ -157,6 +166,8 @@
     };
 }
 
-
-
+#pragma mark - Manage exclued folders
++(void)excludeFolders:(NSArray *)folders {
+    excludedFolders = folders;
+}
 @end

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-BRLOptionParser.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6126F9303AFC4FDFA19173AC</key>
+		<key>03F20FB108F24A2A9727B950</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D4B1B25F3A384C918FD4E7D1</key>
+		<key>2423E647CDC64FE79D67CDCF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>31F881DDB3D042E69BAA82D1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

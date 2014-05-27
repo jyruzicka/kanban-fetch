@@ -50,4 +50,7 @@ typedef enum {
 #pragma mark - For serialization
 -(NSDictionary *)dict;
 
+#pragma mark - Manage exclued folders
++(void)excludeFolders:(NSArray *)folders;
+
 @end

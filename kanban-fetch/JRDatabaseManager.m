@@ -40,8 +40,9 @@ static NSString *kJRDatabasePath;
 }
 
 +(void)setDatabasePath:(NSString *)path {
-    kJRDatabasePath = path;
+    kJRDatabasePath = path.stringByExpandingTildeInPath;
 }
+
 
 #pragma mark - Databse helpers
 +(NSError *)writeProjects:(NSArray *)projects {

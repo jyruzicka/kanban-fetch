@@ -6,6 +6,12 @@
 // project.
 
 
+// BRLOptionParser
+#define COCOAPODS_POD_AVAILABLE_BRLOptionParser
+#define COCOAPODS_VERSION_MAJOR_BRLOptionParser 0
+#define COCOAPODS_VERSION_MINOR_BRLOptionParser 3
+#define COCOAPODS_VERSION_PATCH_BRLOptionParser 0
+
 // FMDB
 #define COCOAPODS_POD_AVAILABLE_FMDB
 #define COCOAPODS_VERSION_MAJOR_FMDB 2
