@@ -6,14 +6,14 @@ NSArray *excludedFolders;
 
 @implementation JRProject
 
--(id)initWithProject:(OmniFocus2Project *)proj {
+-(id)initWithProject:(OmniFocusProject *)proj {
   if (self = [super init]) {
     p = proj;
   }
   return self;
 }
 
-+(id)projectWithProject:(OmniFocus2Project *)proj {
++(id)projectWithProject:(OmniFocusProject *)proj {
   return [[self alloc] initWithProject:proj];
 }
 
@@ -79,15 +79,15 @@ NSArray *excludedFolders;
 -(BOOL)isCompleted {return p.completed;}
 
 -(BOOL)isDropped {
-  return (p.status == OmniFocus2ProjectStatusDropped);
+  return (p.status == OmniFocusProjectStatusDropped);
 }
 
 -(BOOL)isOnHold {
-  return (p.status == OmniFocus2ProjectStatusOnHold);
+  return (p.status == OmniFocusProjectStatusOnHold);
 }
 
 -(BOOL)isWaiting {
-    for (OmniFocus2Task *t in [self availableTasks])
+    for (OmniFocusTask *t in [self availableTasks])
         if (![[[t.context get] name] isEqualToString:@"Waiting for..."])
             return NO;
     

@@ -1,75 +1,75 @@
 /*
- * OmniFocus2.h
+ * OmniFocus.h
  */
 
 #import <AppKit/AppKit.h>
 #import <ScriptingBridge/ScriptingBridge.h>
 
 
-@class OmniFocus2Application, OmniFocus2Document, OmniFocus2Window, OmniFocus2DocumentWindow, OmniFocus2Setting, OmniFocus2FocusSections, OmniFocus2Section, OmniFocus2Folder, OmniFocus2Context, OmniFocus2Project, OmniFocus2Task, OmniFocus2AvailableTask, OmniFocus2RemainingTask, OmniFocus2InboxTask, OmniFocus2FlattenedTask, OmniFocus2FlattenedProject, OmniFocus2FlattenedFolder, OmniFocus2FlattenedContext, OmniFocus2Perspective, OmniFocus2Tree, OmniFocus2QuickEntryTree, OmniFocus2SidebarTree, OmniFocus2ContentTree, OmniFocus2InboxTree, OmniFocus2LibraryTree, OmniFocus2DescendantTree, OmniFocus2AncestorTree, OmniFocus2Leaf, OmniFocus2FollowingSibling, OmniFocus2PrecedingSibling, OmniFocus2SelectedTree, OmniFocus2Style, OmniFocus2Attribute, OmniFocus2NamedStyle, OmniFocus2RichText, OmniFocus2Character, OmniFocus2Paragraph, OmniFocus2Word, OmniFocus2AttributeRun, OmniFocus2Attachment, OmniFocus2FileAttachment, OmniFocus2Preference;
+@class OmniFocusApplication, OmniFocusDocument, OmniFocusWindow, OmniFocusDocumentWindow, OmniFocusSetting, OmniFocusFocusSections, OmniFocusSection, OmniFocusFolder, OmniFocusContext, OmniFocusProject, OmniFocusTask, OmniFocusAvailableTask, OmniFocusRemainingTask, OmniFocusInboxTask, OmniFocusFlattenedTask, OmniFocusFlattenedProject, OmniFocusFlattenedFolder, OmniFocusFlattenedContext, OmniFocusPerspective, OmniFocusTree, OmniFocusQuickEntryTree, OmniFocusSidebarTree, OmniFocusContentTree, OmniFocusInboxTree, OmniFocusLibraryTree, OmniFocusDescendantTree, OmniFocusAncestorTree, OmniFocusLeaf, OmniFocusFollowingSibling, OmniFocusPrecedingSibling, OmniFocusSelectedTree, OmniFocusStyle, OmniFocusAttribute, OmniFocusNamedStyle, OmniFocusRichText, OmniFocusCharacter, OmniFocusParagraph, OmniFocusWord, OmniFocusAttributeRun, OmniFocusAttachment, OmniFocusFileAttachment, OmniFocusPreference;
 
-enum OmniFocus2SaveOptions {
-	OmniFocus2SaveOptionsYes = 'yes ' /* Save the file. */,
-	OmniFocus2SaveOptionsNo = 'no  ' /* Do not save the file. */,
-	OmniFocus2SaveOptionsAsk = 'ask ' /* Ask the user whether or not to save the file. */
+enum OmniFocusSaveOptions {
+	OmniFocusSaveOptionsYes = 'yes ' /* Save the file. */,
+	OmniFocusSaveOptionsNo = 'no  ' /* Do not save the file. */,
+	OmniFocusSaveOptionsAsk = 'ask ' /* Ask the user whether or not to save the file. */
 };
-typedef enum OmniFocus2SaveOptions OmniFocus2SaveOptions;
+typedef enum OmniFocusSaveOptions OmniFocusSaveOptions;
 
-enum OmniFocus2PrintingErrorHandling {
-	OmniFocus2PrintingErrorHandlingStandard = 'lwst' /* Standard PostScript error handling */,
-	OmniFocus2PrintingErrorHandlingDetailed = 'lwdt' /* print a detailed report of PostScript errors */
+enum OmniFocusPrintingErrorHandling {
+	OmniFocusPrintingErrorHandlingStandard = 'lwst' /* Standard PostScript error handling */,
+	OmniFocusPrintingErrorHandlingDetailed = 'lwdt' /* print a detailed report of PostScript errors */
 };
-typedef enum OmniFocus2PrintingErrorHandling OmniFocus2PrintingErrorHandling;
+typedef enum OmniFocusPrintingErrorHandling OmniFocusPrintingErrorHandling;
 
-enum OmniFocus2ProjectStatus {
-	OmniFocus2ProjectStatusActive = 'FCPa' /* Active */,
-	OmniFocus2ProjectStatusOnHold = 'FCPh' /* On Hold */,
-	OmniFocus2ProjectStatusDone = 'FCPd' /* Done */,
-	OmniFocus2ProjectStatusDropped = 'FCPD' /* Dropped */
+enum OmniFocusProjectStatus {
+	OmniFocusProjectStatusActive = 'FCPa' /* Active */,
+	OmniFocusProjectStatusOnHold = 'FCPh' /* On Hold */,
+	OmniFocusProjectStatusDone = 'FCPd' /* Done */,
+	OmniFocusProjectStatusDropped = 'FCPD' /* Dropped */
 };
-typedef enum OmniFocus2ProjectStatus OmniFocus2ProjectStatus;
+typedef enum OmniFocusProjectStatus OmniFocusProjectStatus;
 
-enum OmniFocus2IntervalUnit {
-	OmniFocus2IntervalUnitMinute = 'FCIM' /* Minutes */,
-	OmniFocus2IntervalUnitHour = 'FCIH' /* Hours */,
-	OmniFocus2IntervalUnitDay = 'FCId' /* Days */,
-	OmniFocus2IntervalUnitWeek = 'FCIw' /* Weeks */,
-	OmniFocus2IntervalUnitMonth = 'FCIm' /* Months */,
-	OmniFocus2IntervalUnitYear = 'FCIy' /* Years */
+enum OmniFocusIntervalUnit {
+	OmniFocusIntervalUnitMinute = 'FCIM' /* Minutes */,
+	OmniFocusIntervalUnitHour = 'FCIH' /* Hours */,
+	OmniFocusIntervalUnitDay = 'FCId' /* Days */,
+	OmniFocusIntervalUnitWeek = 'FCIw' /* Weeks */,
+	OmniFocusIntervalUnitMonth = 'FCIm' /* Months */,
+	OmniFocusIntervalUnitYear = 'FCIy' /* Years */
 };
-typedef enum OmniFocus2IntervalUnit OmniFocus2IntervalUnit;
+typedef enum OmniFocusIntervalUnit OmniFocusIntervalUnit;
 
-enum OmniFocus2RepetitionMethod {
-	OmniFocus2RepetitionMethodFixedRepetition = 'FRmF' /* Repeat on a fixed schedule. */,
-	OmniFocus2RepetitionMethodStartAfterCompletion = 'FRmS' /* Start again after completion. */,
-	OmniFocus2RepetitionMethodDueAfterCompletion = 'FRmD' /* Due again after completion. */
+enum OmniFocusRepetitionMethod {
+	OmniFocusRepetitionMethodFixedRepetition = 'FRmF' /* Repeat on a fixed schedule. */,
+	OmniFocusRepetitionMethodStartAfterCompletion = 'FRmS' /* Start again after completion. */,
+	OmniFocusRepetitionMethodDueAfterCompletion = 'FRmD' /* Due again after completion. */
 };
-typedef enum OmniFocus2RepetitionMethod OmniFocus2RepetitionMethod;
+typedef enum OmniFocusRepetitionMethod OmniFocusRepetitionMethod;
 
-enum OmniFocus2LocationTrigger {
-	OmniFocus2LocationTriggerNotifyWhenArriving = 'Larv' /* notify when arriving at this location */,
-	OmniFocus2LocationTriggerNotifyWhenLeaving = 'Llev' /* notify when leaving this location */
+enum OmniFocusLocationTrigger {
+	OmniFocusLocationTriggerNotifyWhenArriving = 'Larv' /* notify when arriving at this location */,
+	OmniFocusLocationTriggerNotifyWhenLeaving = 'Llev' /* notify when leaving this location */
 };
-typedef enum OmniFocus2LocationTrigger OmniFocus2LocationTrigger;
+typedef enum OmniFocusLocationTrigger OmniFocusLocationTrigger;
 
-enum OmniFocus2SidebarTab {
-	OmniFocus2SidebarTabInboxTab = 'FCT0' /* inbox tab */,
-	OmniFocus2SidebarTabProjectsTab = 'FCT1' /* projects tab */,
-	OmniFocus2SidebarTabContextsTab = 'FCT2' /* contexts tab */,
-	OmniFocus2SidebarTabForecastTab = 'FCT3' /* forecast tab */,
-	OmniFocus2SidebarTabFlaggedTab = 'FCT4' /* flagged tab */,
-	OmniFocus2SidebarTabReviewTab = 'FCT5' /* review tab */
+enum OmniFocusSidebarTab {
+	OmniFocusSidebarTabInboxTab = 'FCT0' /* inbox tab */,
+	OmniFocusSidebarTabProjectsTab = 'FCT1' /* projects tab */,
+	OmniFocusSidebarTabContextsTab = 'FCT2' /* contexts tab */,
+	OmniFocusSidebarTabForecastTab = 'FCT3' /* forecast tab */,
+	OmniFocusSidebarTabFlaggedTab = 'FCT4' /* flagged tab */,
+	OmniFocusSidebarTabReviewTab = 'FCT5' /* review tab */
 };
-typedef enum OmniFocus2SidebarTab OmniFocus2SidebarTab;
+typedef enum OmniFocusSidebarTab OmniFocusSidebarTab;
 
-enum OmniFocus2TextAlignment {
-	OmniFocus2TextAlignmentLeft = 'OTa0',
-	OmniFocus2TextAlignmentRight = 'OTa2',
-	OmniFocus2TextAlignmentCenter = 'OTa1',
-	OmniFocus2TextAlignmentJustified = 'OTa3',
-	OmniFocus2TextAlignmentNatural = 'OTa4'
+enum OmniFocusTextAlignment {
+	OmniFocusTextAlignmentLeft = 'OTa0',
+	OmniFocusTextAlignmentRight = 'OTa2',
+	OmniFocusTextAlignmentCenter = 'OTa1',
+	OmniFocusTextAlignmentJustified = 'OTa3',
+	OmniFocusTextAlignmentNatural = 'OTa4'
 };
-typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
+typedef enum OmniFocusTextAlignment OmniFocusTextAlignment;
 
 
 
@@ -78,7 +78,7 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
  */
 
 // The application's top-level scripting object.
-@interface OmniFocus2Application : SBApplication
+@interface OmniFocusApplication : SBApplication
 
 - (SBElementArray *) documents;
 - (SBElementArray *) windows;
@@ -89,28 +89,28 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 
 - (id) open:(id)x usingCache:(BOOL)usingCache repairInPlace:(BOOL)repairInPlace upgradeInPlace:(BOOL)upgradeInPlace;  // Open one or more documents.
 - (void) print:(id)x withProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
-- (void) quitSaving:(OmniFocus2SaveOptions)saving;  // Quit the application.
+- (void) quitSaving:(OmniFocusSaveOptions)saving;  // Quit the application.
 - (id) duplicate:(id)x to:(SBObject *)to withProperties:(NSDictionary *)withProperties;  // Copy an object.
 - (BOOL) exists:(id)x;  // Verify that an object exists.
 - (void) GetURL:(NSString *)x;  // Open a document from an URL.
 - (NSArray *) complete:(NSString *)x as:(NSNumber *)as spanClass:(NSString *)spanClass maximumMatches:(NSInteger)maximumMatches;  // Generate a list of completions given a string.
-- (void) pbcopyItems:(id)items from:(OmniFocus2Tree *)from as:(id)as to:(NSString *)to;  // Copies one or more nodes to the pasteboard.
+- (void) pbcopyItems:(id)items from:(OmniFocusTree *)from as:(id)as to:(NSString *)to;  // Copies one or more nodes to the pasteboard.
 - (void) pbpasteAt:(SBObject *)at from:(NSString *)from;  // Pastes nodes from the pasteboard.
 - (void) pbsaveIn:(NSURL *)in_ as:(NSString *)as from:(NSString *)from;  // Saves data from the pasteboard to a file.
-- (void) insert:(NSString *)x at:(SBObject *)at using:(OmniFocus2Style *)using_;  // Insert text in the middle of an existing blob of text.
+- (void) insert:(NSString *)x at:(SBObject *)at using:(OmniFocusStyle *)using_;  // Insert text in the middle of an existing blob of text.
 - (void) add:(id)x to:(SBObject *)to;  // Add the given object(s) to the container.
 - (void) remove:(id)x from:(SBObject *)from;  // Remove the given object(s) from the container.
 
 @end
 
 // A document.
-@interface OmniFocus2Document : SBObject
+@interface OmniFocusDocument : SBObject
 
 @property (copy, readonly) NSString *name;  // Its name.
 @property (readonly) BOOL modified;  // Has it been modified since the last save?
 @property (copy, readonly) NSURL *file;  // Its location on disk, if it has one.
 
-- (void) closeSaving:(OmniFocus2SaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
+- (void) closeSaving:(OmniFocusSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
 - (void) saveIn:(NSURL *)in_ as:(NSString *)as compression:(BOOL)compression;  // Save a document.
 - (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
 - (void) delete;  // Delete an object.
@@ -129,7 +129,7 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @end
 
 // A window.
-@interface OmniFocus2Window : SBObject
+@interface OmniFocusWindow : SBObject
 
 @property (copy, readonly) NSString *name;  // The title of the window.
 - (NSInteger) id;  // The unique identifier of the window.
@@ -142,9 +142,9 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @property BOOL visible;  // Is the window visible right now?
 @property (readonly) BOOL zoomable;  // Does the window have a zoom button?
 @property BOOL zoomed;  // Is the window zoomed right now?
-@property (copy, readonly) OmniFocus2Document *document;  // The document whose contents are displayed in the window.
+@property (copy, readonly) OmniFocusDocument *document;  // The document whose contents are displayed in the window.
 
-- (void) closeSaving:(OmniFocus2SaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
+- (void) closeSaving:(OmniFocusSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
 - (void) saveIn:(NSURL *)in_ as:(NSString *)as compression:(BOOL)compression;  // Save a document.
 - (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
 - (void) delete;  // Delete an object.
@@ -166,7 +166,7 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
  * OmniFocus suite
  */
 
-@interface OmniFocus2Application (OmniFocusSuite)
+@interface OmniFocusApplication (OmniFocusSuite)
 
 - (SBElementArray *) perspectives;
 - (SBElementArray *) preferences;
@@ -174,14 +174,14 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @property (copy, readonly) NSString *buildNumber;  // This is the build number of the application, for example 63.1 or 63.  Major and minor versions are separated by a dot.  So 63.10 comes after 63.1.
 @property (copy) NSDate *referenceDate;  // The date on from which the date collated smart groups are based.  When set, the reference date will be rounded to the first instant of the day of the specified date.
 @property double currentTimeOffset;  // The current time offset from a reference date. Useful for timing scripts.
-@property (copy) OmniFocus2Document *defaultDocument;  // The user's default document.
-@property (copy) OmniFocus2QuickEntryTree *quickEntry;  // The Quick Entry panel for the default document.
+@property (copy) OmniFocusDocument *defaultDocument;  // The user's default document.
+@property (copy) OmniFocusQuickEntryTree *quickEntry;  // The Quick Entry panel for the default document.
 @property (copy, readonly) NSArray *perspectiveNames;  // The names of all available perspectives.
 
 @end
 
 // An OmniFocus document.
-@interface OmniFocus2Document (OmniFocusSuite)
+@interface OmniFocusDocument (OmniFocusSuite)
 
 - (SBElementArray *) settings;
 - (SBElementArray *) documentWindows;
@@ -205,17 +205,17 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @property (readonly) BOOL syncing;  // True if the document is currently syncing, false otherwise.
 @property (copy, readonly) NSDate *lastSyncDate;  // Date of the last sync.
 @property (copy, readonly) NSString *lastSyncError;  // Error message (if any) for the last sync.
-@property (copy) OmniFocus2QuickEntryTree *quickEntry;  // The Quick Entry panel for the document.
+@property (copy) OmniFocusQuickEntryTree *quickEntry;  // The Quick Entry panel for the document.
 
 @end
 
 // A window of an OmniFocus document.
-@interface OmniFocus2DocumentWindow : OmniFocus2Window
+@interface OmniFocusDocumentWindow : OmniFocusWindow
 
 @property (copy) NSString *searchTerm;  // The search term in the toolbar.  If there is no search toolbar item, this will return missing value instead of an empty string and setting it will cause an error.
 @property (copy) id selectedSidebarTab;  // The selected tab in the sidebar.
-@property (copy, readonly) OmniFocus2SidebarTree *sidebar;  // The tree of objects in the window sidebar.
-@property (copy, readonly) OmniFocus2ContentTree *content;  // The tree of objects in the main window content.
+@property (copy, readonly) OmniFocusSidebarTree *sidebar;  // The tree of objects in the window sidebar.
+@property (copy, readonly) OmniFocusContentTree *content;  // The tree of objects in the main window content.
 @property (copy) NSString *perspectiveName;  // The name of a perspective.
 @property (copy) id focus;  // A list of the projects and folders forming the project focus of this document window.
 
@@ -223,13 +223,13 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @end
 
 // Document setting
-@interface OmniFocus2Setting : SBObject
+@interface OmniFocusSetting : SBObject
 
 - (NSString *) id;  // The identifier of the setting.
 @property (copy) id value;  // The current value of the setting.
 @property (copy) id defaultValue;  // The default value of the setting.
 
-- (void) closeSaving:(OmniFocus2SaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
+- (void) closeSaving:(OmniFocusSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
 - (void) saveIn:(NSURL *)in_ as:(NSString *)as compression:(BOOL)compression;  // Save a document.
 - (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
 - (void) delete;  // Delete an object.
@@ -246,10 +246,10 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @end
 
 // The current focus of a document window.
-@interface OmniFocus2FocusSections : SBObject
+@interface OmniFocusFocusSections : SBObject
 
 
-- (void) closeSaving:(OmniFocus2SaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
+- (void) closeSaving:(OmniFocusSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
 - (void) saveIn:(NSURL *)in_ as:(NSString *)as compression:(BOOL)compression;  // Save a document.
 - (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
 - (void) delete;  // Delete an object.
@@ -266,12 +266,12 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @end
 
 // A portion of a folder or document; either a project or a folder.
-@interface OmniFocus2Section : SBObject
+@interface OmniFocusSection : SBObject
 
 - (NSString *) id;  // The identifier of the project or folder.
 @property (copy) NSString *name;  // The name of the project or folder.
 
-- (void) closeSaving:(OmniFocus2SaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
+- (void) closeSaving:(OmniFocusSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
 - (void) saveIn:(NSURL *)in_ as:(NSString *)as compression:(BOOL)compression;  // Save a document.
 - (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
 - (void) delete;  // Delete an object.
@@ -288,7 +288,7 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @end
 
 // A group of projects and sub-folders representing an folder of responsibility.
-@interface OmniFocus2Folder : OmniFocus2Section
+@interface OmniFocusFolder : OmniFocusSection
 
 - (SBElementArray *) sections;
 - (SBElementArray *) folders;
@@ -298,7 +298,7 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 
 - (NSString *) id;  // The identifier of the folder.
 @property (copy) NSString *name;  // The name of the folder.
-@property (copy) OmniFocus2RichText *note;  // The note of the folder.
+@property (copy) OmniFocusRichText *note;  // The note of the folder.
 @property BOOL hidden;  // Set if the folder is currently hidden.
 @property (readonly) BOOL effectivelyHidden;  // Set if the folder is currently hidden or any of its container folders are hidden.
 @property (copy, readonly) NSDate *creationDate;  // When the folder was created.
@@ -310,7 +310,7 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @end
 
 // A context.
-@interface OmniFocus2Context : SBObject
+@interface OmniFocusContext : SBObject
 
 - (SBElementArray *) contexts;
 - (SBElementArray *) flattenedContexts;
@@ -321,17 +321,17 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 - (NSString *) id;  // The identifier of the context.
 - (void) setId: (NSString *) id;
 @property (copy) NSString *name;  // The name of the context.
-@property (copy) OmniFocus2RichText *note;  // The note of the context.
+@property (copy) OmniFocusRichText *note;  // The note of the context.
 @property BOOL allowsNextAction;  // If false, tasks assigned to this context will be skipped when determining the next action for a project.
 @property BOOL hidden;  // Set if the context is currently hidden.
 @property (readonly) BOOL effectivelyHidden;  // Set if the context is currently hidden or any of its container contexts are hidden.
-@property (copy, readonly) OmniFocus2Context *container;  // The containing context.
+@property (copy, readonly) OmniFocusContext *container;  // The containing context.
 @property (readonly) NSInteger availableTaskCount;  // A count of the number of unblocked and incomplete tasks of this context and all its active descendent contexts.
 @property (readonly) NSInteger remainingTaskCount;  // A count of the number of incomplete tasks of this context and all its active descendent contexts.
 @property (copy, readonly) id containingDocument;  // The containing document or quick entry tree of the object.
 @property (copy) id location;  // The physical location of the context.
 
-- (void) closeSaving:(OmniFocus2SaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
+- (void) closeSaving:(OmniFocusSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
 - (void) saveIn:(NSURL *)in_ as:(NSString *)as compression:(BOOL)compression;  // Save a document.
 - (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
 - (void) delete;  // Delete an object.
@@ -348,22 +348,22 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @end
 
 // A project.
-@interface OmniFocus2Project : OmniFocus2Section
+@interface OmniFocusProject : OmniFocusSection
 
 - (NSString *) id;  // The identifier of the project.
 - (void) setId: (NSString *) id;
-@property (copy, readonly) OmniFocus2Task *rootTask;  // The root task of this project, holding the project's name, note, dates and child tasks.
+@property (copy, readonly) OmniFocusTask *rootTask;  // The root task of this project, holding the project's name, note, dates and child tasks.
 @property (copy, readonly) id nextTask;  // The next actionable child of this project.
 @property (copy) NSDate *lastReviewDate;  // When the project was last reviewed.
 @property (copy) NSDate *nextReviewDate;  // When the project should next be reviewed.
 @property (copy) NSDictionary *reviewInterval;  // The review interval for the project.
-@property OmniFocus2ProjectStatus status;  // The status of the project.
+@property OmniFocusProjectStatus status;  // The status of the project.
 @property BOOL singletonActionHolder;  // True if the project contains singleton actions.
 @property BOOL defaultSingletonActionHolder;  // True if the project is the default holder of sington actions.  Only one project can have this flag set; setting it on a project will clear it on any other project having it.  Setting this to true will set 'singleton action holder' to true if not already so set.
 @property (copy, readonly) id container;  // The containing folder or document.
 @property (copy, readonly) id folder;  // The folder of the project, or missing value if it is contained directly by the document.
 @property (copy) NSString *name;  // The name of the project.
-@property (copy) OmniFocus2RichText *note;  // The note of the project.
+@property (copy) OmniFocusRichText *note;  // The note of the project.
 @property (copy, readonly) id containingDocument;  // The containing document or quick entry tree of the object.
 @property (copy) id context;  // The project's context.  If a child is added, this will be used for its context.
 @property BOOL completedByChildren;  // If true, complete when children are completed.
@@ -386,7 +386,7 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @end
 
 // A task. This might represent the root of a project, an action within a project or other action or an inbox item.
-@interface OmniFocus2Task : SBObject
+@interface OmniFocusTask : SBObject
 
 - (SBElementArray *) tasks;
 - (SBElementArray *) flattenedTasks;
@@ -394,7 +394,7 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 - (NSString *) id;  // The identifier of the task.
 - (void) setId: (NSString *) id;
 @property (copy) NSString *name;  // The name of the task.
-@property (copy) OmniFocus2RichText *note;  // The note of the task.
+@property (copy) OmniFocusRichText *note;  // The note of the task.
 @property (copy, readonly) id container;  // The containing task, project or document.
 @property (copy, readonly) id containingProject;  // The task's project, up however many levels of parent tasks.  Inbox tasks aren't considered contained by their provisionalliy assigned container, so if the task is actually an inbox task, this will be missing value.
 @property (copy, readonly) id parentTask;  // The task holding this task.  If this is missing value, then this is a top level task -- either the root of a project or an inbox item.
@@ -418,7 +418,7 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @property (readonly) NSInteger numberOfAvailableTasks;  // The number of available direct children of this task.
 @property (readonly) NSInteger numberOfCompletedTasks;  // The number of completed direct children of this task.
 
-- (void) closeSaving:(OmniFocus2SaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
+- (void) closeSaving:(OmniFocusSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
 - (void) saveIn:(NSURL *)in_ as:(NSString *)as compression:(BOOL)compression;  // Save a document.
 - (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
 - (void) delete;  // Delete an object.
@@ -435,19 +435,19 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @end
 
 // A task that is available for action.  This is simply a filter on the existing tasks and should be considred a read-only element.  These cannot be created directly; instead create a normal task.
-@interface OmniFocus2AvailableTask : OmniFocus2Task
+@interface OmniFocusAvailableTask : OmniFocusTask
 
 
 @end
 
 // A task that is not complete, though it may be blocked.  This is simply a filter on the existing tasks and should be considred a read-only element.  These cannot be created directly; instead create a normal task.
-@interface OmniFocus2RemainingTask : OmniFocus2Task
+@interface OmniFocusRemainingTask : OmniFocusTask
 
 
 @end
 
 // A task that is in the document's inbox
-@interface OmniFocus2InboxTask : OmniFocus2Task
+@interface OmniFocusInboxTask : OmniFocusTask
 
 @property (copy) id assignedContainer;  // Inbox tasks (those contained directly by the document) have a provisionally set container that is made final by the 'compact' command.  This allows you to set and get said container.  The container must be either a task (not in the inbox or contained by an inbox task), a project or 'missing value'.
 
@@ -455,37 +455,37 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @end
 
 // A flattened list of tasks under a task or document.
-@interface OmniFocus2FlattenedTask : OmniFocus2Task
+@interface OmniFocusFlattenedTask : OmniFocusTask
 
 
 @end
 
 // A flattened list of projects under a folder or document.
-@interface OmniFocus2FlattenedProject : OmniFocus2Project
+@interface OmniFocusFlattenedProject : OmniFocusProject
 
 
 @end
 
 // A flattened list of folders in a document.
-@interface OmniFocus2FlattenedFolder : OmniFocus2Folder
+@interface OmniFocusFlattenedFolder : OmniFocusFolder
 
 
 @end
 
 // A flattened list of contexts in a document.
-@interface OmniFocus2FlattenedContext : OmniFocus2Context
+@interface OmniFocusFlattenedContext : OmniFocusContext
 
 
 @end
 
 // A perspective.
-@interface OmniFocus2Perspective : SBObject
+@interface OmniFocusPerspective : SBObject
 
 - (NSString *) id;  // The identifier of the perspective.
 - (void) setId: (NSString *) id;
 @property (copy) NSString *name;  // The name of the perspective.
 
-- (void) closeSaving:(OmniFocus2SaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
+- (void) closeSaving:(OmniFocusSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
 - (void) saveIn:(NSURL *)in_ as:(NSString *)as compression:(BOOL)compression;  // Save a document.
 - (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
 - (void) delete;  // Delete an object.
@@ -508,7 +508,7 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
  */
 
 // A tree representing an object, along with its sub-trees.
-@interface OmniFocus2Tree : SBObject
+@interface OmniFocusTree : SBObject
 
 - (SBElementArray *) trees;
 - (SBElementArray *) descendantTrees;
@@ -527,7 +527,7 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @property (copy) NSArray *writablePasteboardTypes;  // A list of the types that can be used when writing nodes to the pasteboard (i.e., copying).
 @property (copy) NSArray *readablePasteboardTypes;  // A list of the types that can be used when reading nodes from the pasteboard (i.e., pasteing).
 
-- (void) closeSaving:(OmniFocus2SaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
+- (void) closeSaving:(OmniFocusSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
 - (void) saveIn:(NSURL *)in_ as:(NSString *)as compression:(BOOL)compression;  // Save a document.
 - (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
 - (void) delete;  // Delete an object.
@@ -550,7 +550,7 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
  */
 
 // The Quick Entry panel.
-@interface OmniFocus2QuickEntryTree : OmniFocus2Tree
+@interface OmniFocusQuickEntryTree : OmniFocusTree
 
 - (SBElementArray *) folders;
 - (SBElementArray *) projects;
@@ -563,14 +563,14 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @end
 
 // The tree of objects in the window sidebar.
-@interface OmniFocus2SidebarTree : OmniFocus2Tree
+@interface OmniFocusSidebarTree : OmniFocusTree
 
 
 
 @end
 
 // The tree of objects in the main window content.
-@interface OmniFocus2ContentTree : OmniFocus2Tree
+@interface OmniFocusContentTree : OmniFocusTree
 
 @property (copy, readonly) NSArray *availableGroupingIdentifiers;  // The list of possible identifiers that can be set as the selected grouping identifier.
 @property (copy) NSString *selectedGroupingIdentifier;  // The currently selected grouping identifier, controlling how the results shown in the content area are grouped.
@@ -587,13 +587,13 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @end
 
 // The tree in the sidebar representing the Inbox.
-@interface OmniFocus2InboxTree : OmniFocus2Tree
+@interface OmniFocusInboxTree : OmniFocusTree
 
 
 @end
 
 // The tree in the sidebar representing the top level library of objects.
-@interface OmniFocus2LibraryTree : OmniFocus2Tree
+@interface OmniFocusLibraryTree : OmniFocusTree
 
 
 @end
@@ -605,37 +605,37 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
  */
 
 // All the descendant trees in the user-specified sort ordering, listing each tree, then its children and so forth.
-@interface OmniFocus2DescendantTree : OmniFocus2Tree
+@interface OmniFocusDescendantTree : OmniFocusTree
 
 
 @end
 
 // The ancestor trees of this tree.
-@interface OmniFocus2AncestorTree : OmniFocus2Tree
+@interface OmniFocusAncestorTree : OmniFocusTree
 
 
 @end
 
 // The descendants of a tree that have no children themselves.
-@interface OmniFocus2Leaf : OmniFocus2Tree
+@interface OmniFocusLeaf : OmniFocusTree
 
 
 @end
 
 // The sibling trees of this tree after it in the user-specified sort ordering.
-@interface OmniFocus2FollowingSibling : OmniFocus2Tree
+@interface OmniFocusFollowingSibling : OmniFocusTree
 
 
 @end
 
 // The sibling trees of this tree before it in the user-specified sort ordering.
-@interface OmniFocus2PrecedingSibling : OmniFocus2Tree
+@interface OmniFocusPrecedingSibling : OmniFocusTree
 
 
 @end
 
 // The trees of this tree that are selected in the user interface, possibly including this tree.
-@interface OmniFocus2SelectedTree : OmniFocus2Tree
+@interface OmniFocusSelectedTree : OmniFocusTree
 
 
 @end
@@ -647,7 +647,7 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
  */
 
 // A style object.
-@interface OmniFocus2Style : SBObject
+@interface OmniFocusStyle : SBObject
 
 - (SBElementArray *) namedStyles;
 - (SBElementArray *) attributes;
@@ -655,7 +655,7 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @property (copy, readonly) id container;  // The object owning the style.
 @property (copy) NSString *font;  // The name of the font of the style.
 
-- (void) closeSaving:(OmniFocus2SaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
+- (void) closeSaving:(OmniFocusSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
 - (void) saveIn:(NSURL *)in_ as:(NSString *)as compression:(BOOL)compression;  // Save a document.
 - (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
 - (void) delete;  // Delete an object.
@@ -672,15 +672,15 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @end
 
 // An attribute of a style.
-@interface OmniFocus2Attribute : SBObject
+@interface OmniFocusAttribute : SBObject
 
 @property (copy, readonly) NSString *name;  // The name of the attribute.
-@property (copy) OmniFocus2Style *style;  // The style to which the attribute refers.
-@property (copy, readonly) OmniFocus2Style *definingStyle;  // The style responsible for the effective value in this attributes's style.  This processes the local values, inherited styles and cascade chain.
+@property (copy) OmniFocusStyle *style;  // The style to which the attribute refers.
+@property (copy, readonly) OmniFocusStyle *definingStyle;  // The style responsible for the effective value in this attributes's style.  This processes the local values, inherited styles and cascade chain.
 @property (copy) id value;  // The value of the attribute in its style.
 @property (copy) id defaultValue;  // The default value of the attribute in its style.
 
-- (void) closeSaving:(OmniFocus2SaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
+- (void) closeSaving:(OmniFocusSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
 - (void) saveIn:(NSURL *)in_ as:(NSString *)as compression:(BOOL)compression;  // Save a document.
 - (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
 - (void) delete;  // Delete an object.
@@ -697,7 +697,7 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @end
 
 // A named style object.
-@interface OmniFocus2NamedStyle : OmniFocus2Style
+@interface OmniFocusNamedStyle : OmniFocusStyle
 
 - (NSString *) id;  // An identifier for the named style that is unique within its document.  Currently this identifier is not persistent between two different sessions of editing the document.
 @property (copy) NSString *name;  // The name of the style.  Must be unique within the containing document.
@@ -712,7 +712,7 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
  */
 
 // Rich (styled) text
-@interface OmniFocus2RichText : SBObject
+@interface OmniFocusRichText : SBObject
 
 - (SBElementArray *) characters;
 - (SBElementArray *) paragraphs;
@@ -725,9 +725,9 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @property (copy) NSColor *color;  // The color of the first character.
 @property (copy) NSString *font;  // The name of the font of the first character.
 @property NSInteger size;  // The size in points of the first character.
-@property (copy) OmniFocus2Style *style;  // The style of the text.
+@property (copy) OmniFocusStyle *style;  // The style of the text.
 
-- (void) closeSaving:(OmniFocus2SaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
+- (void) closeSaving:(OmniFocusSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
 - (void) saveIn:(NSURL *)in_ as:(NSString *)as compression:(BOOL)compression;  // Save a document.
 - (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
 - (void) delete;  // Delete an object.
@@ -751,37 +751,37 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
 @end
 
 // This subdivides the text into characters.
-@interface OmniFocus2Character : OmniFocus2RichText
+@interface OmniFocusCharacter : OmniFocusRichText
 
 
 @end
 
 // This subdivides the text into paragraphs.
-@interface OmniFocus2Paragraph : OmniFocus2RichText
+@interface OmniFocusParagraph : OmniFocusRichText
 
 
 @end
 
 // This subdivides the text into words.
-@interface OmniFocus2Word : OmniFocus2RichText
+@interface OmniFocusWord : OmniFocusRichText
 
 
 @end
 
 // This subdivides the text into chunks that all have the same attributes.
-@interface OmniFocus2AttributeRun : OmniFocus2RichText
+@interface OmniFocusAttributeRun : OmniFocusRichText
 
 
 @end
 
 // Represents an inline text attachment.
-@interface OmniFocus2Attachment : OmniFocus2RichText
+@interface OmniFocusAttachment : OmniFocusRichText
 
 
 @end
 
 // A text attachment refering to a plain file.
-@interface OmniFocus2FileAttachment : OmniFocus2Attachment
+@interface OmniFocusFileAttachment : OmniFocusAttachment
 
 @property (copy, readonly) NSURL *fileName;  // The path to the file for the attachment, if the attachment resides outside the document.
 @property (readonly) BOOL embedded;  // If true, the attached file will reside inside the document on the next save.
@@ -795,12 +795,12 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
  * Extended Text Suite
  */
 
-@interface OmniFocus2RichText (ExtendedTextSuite)
+@interface OmniFocusRichText (ExtendedTextSuite)
 
 @property double baselineOffset;  // Number of pixels shifted above or below the normal baseline.
 @property BOOL underlined;  // Is the first character underlined?
 @property NSInteger superscript;  // The superscript level of the text.
-@property OmniFocus2TextAlignment alignment;  // Alignment of the text.
+@property OmniFocusTextAlignment alignment;  // Alignment of the text.
 
 @end
 
@@ -811,13 +811,13 @@ typedef enum OmniFocus2TextAlignment OmniFocus2TextAlignment;
  */
 
 // Application preference
-@interface OmniFocus2Preference : SBObject
+@interface OmniFocusPreference : SBObject
 
 - (NSString *) id;  // The identifier of the preference.
 @property (copy) id value;  // The current value of the preference.
 @property (copy) id defaultValue;  // The default value of the preference.
 
-- (void) closeSaving:(OmniFocus2SaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
+- (void) closeSaving:(OmniFocusSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
 - (void) saveIn:(NSURL *)in_ as:(NSString *)as compression:(BOOL)compression;  // Save a document.
 - (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
 - (void) delete;  // Delete an object.

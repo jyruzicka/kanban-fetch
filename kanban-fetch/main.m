@@ -91,7 +91,7 @@ int main(int argc, const char * argv[])
         [logger debug:@"Fetched %lu projects from OmniFocus.", [allProjects count]];
         NSMutableArray *kbProjects = [NSMutableArray arrayWithCapacity:[allProjects count]];
     
-        for (OmniFocus2Project *p in allProjects) {
+        for (OmniFocusProject *p in allProjects) {
             JRProject *kbp = [JRProject projectWithProject:p];
             if ([kbp isReportable])
                 [kbProjects addObject: kbp];

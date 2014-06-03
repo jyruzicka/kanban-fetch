@@ -8,12 +8,12 @@
 
 #import "JROmniFocus.h"
 
-#import "OmniFocus2.h"
+#import "OmniFocus.h"
 #import "SystemEvents.h"
 
 #import "JRLogger.h"
 
-static OmniFocus2Application* kJROF;
+static OmniFocusApplication* kJROF;
 static SBElementArray *kProjects, *kTasks;
 static NSString *kOF2ID = @"com.omnigroup.OmniFocus2";
 static NSString *kOF2AppStoreID = @"com.omnigroup.OmniFocus2.MacAppStore";
@@ -45,7 +45,7 @@ NSString *kJRAppIdentifier;
     }
 }
 
-+(OmniFocus2Application *)omnifocus {
++(OmniFocusApplication *)omnifocus {
     if (!kJROF){
         [[JRLogger logger] debug:@"Connection to bundle: %@",kJRAppIdentifier];
         kJROF = [SBApplication applicationWithBundleIdentifier:kJRAppIdentifier];
