@@ -1,4 +1,5 @@
 PODS:
+  - BRLOptionParser (0.3.0)
   - FMDB (2.1):
     - FMDB/standard
   - FMDB/common (2.1)
@@ -6,9 +7,15 @@ PODS:
     - FMDB/common
 
 DEPENDENCIES:
+  - BRLOptionParser (from `https://github.com/barrelage/BRLOptionParser.git`)
   - FMDB
 
+EXTERNAL SOURCES:
+  BRLOptionParser:
+    :git: https://github.com/barrelage/BRLOptionParser.git
+
 SPEC CHECKSUMS:
+  BRLOptionParser: e034c1be1a1515e9b22e752eacb8edd9abb0df4d
   FMDB: 3fd5aaf632ca4ed39e3f101e0398504e6d5b0918
 
-COCOAPODS: 0.28.0
+COCOAPODS: 0.33.1

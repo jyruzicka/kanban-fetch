@@ -9,9 +9,13 @@
 #import <Foundation/Foundation.h>
 @class SBElementArray;
 
-@interface JROmniFocus : NSObject
+@interface JROmniFocus : NSObject {
+    NSString *appIdentifier;
+}
 
 +(BOOL)isRunning;
++(BOOL)isPro;
+
 +(SBElementArray *)projects;
 +(SBElementArray *)tasks;
 @end

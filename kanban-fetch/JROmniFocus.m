@@ -7,23 +7,52 @@
 //
 
 #import "JROmniFocus.h"
-#import "OmniFocus.h"
 
-static OmniFocusApplication* kJROF;
+#import "OmniFocus2.h"
+#import "SystemEvents.h"
+
+#import "JRLogger.h"
+
+static OmniFocus2Application* kJROF;
 static SBElementArray *kProjects, *kTasks;
+static NSString *kOF2ID = @"com.omnigroup.OmniFocus2";
+static NSString *kOF2AppStoreID = @"com.omnigroup.OmniFocus2.MacAppStore";
+NSString *kJRAppIdentifier;
 
 @implementation JROmniFocus
 
-+(OmniFocusApplication *)omnifocus {
-    if (!kJROF)
-        kJROF = [SBApplication applicationWithBundleIdentifier:@"com.omnigroup.omnifocus"];
-    
++(BOOL) isRunning {
+    NSArray *apps = [[NSWorkspace sharedWorkspace] runningApplications];
+    for (NSRunningApplication *app in apps) {
+        if ([app.bundleIdentifier isEqualToString:kOF2ID] ||
+            [app.bundleIdentifier isEqualToString:kOF2AppStoreID]) {
+            
+            kJRAppIdentifier = app.bundleIdentifier;
+            [[JRLogger logger] debug:@"OmniFocus bundle identified: %@",kJRAppIdentifier];
+            return true;
+        }
+    }
+    return false;
+}
+
++(BOOL) isPro {
+    @try {
+        [[self omnifocus] defaultDocument];
+        return YES;
+    }
+    @catch (NSException *exception) {
+        return NO;
+    }
+}
+
++(OmniFocus2Application *)omnifocus {
+    if (!kJROF){
+        [[JRLogger logger] debug:@"Connection to bundle: %@",kJRAppIdentifier];
+        kJROF = [SBApplication applicationWithBundleIdentifier:kJRAppIdentifier];
+    }
     return kJROF;
 }
 
-+(BOOL) isRunning {
-    return [[self omnifocus] isRunning];
-}
 
 +(SBElementArray *)projects {
     if (!kProjects)

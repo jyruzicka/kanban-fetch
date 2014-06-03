@@ -1,7 +1,7 @@
 #import <Cocoa/Cocoa.h>
-#import "OmniFocus.h"
+#import "OmniFocus2.h"
 
-@class OmniFocusProject;
+@class OmniFocus2Project;
 
 typedef enum {
     kJRActiveProject,
@@ -13,15 +13,15 @@ typedef enum {
 } JRProjectStatus;
 
 @interface JRProject : NSObject {
-    OmniFocusProject *p;
+    OmniFocus2Project *p;
     int _daysDeferred;
     JRProjectStatus _type;
     NSArray *_availableTasks, *_tasks;
     NSMutableArray *_ancestors;
 }
 
--(id)initWithProject:(OmniFocusProject *)proj;
-+(id)projectWithProject:(OmniFocusProject *)proj;
+-(id)initWithProject:(OmniFocus2Project *)proj;
++(id)projectWithProject:(OmniFocus2Project *)proj;
 
 #pragma mark - Pseudoproperties
 -(int)daysDeferred;
@@ -49,5 +49,8 @@ typedef enum {
 
 #pragma mark - For serialization
 -(NSDictionary *)dict;
+
+#pragma mark - Manage exclued folders
++(void)excludeFolders:(NSArray *)folders;
 
 @end
