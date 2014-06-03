@@ -12,6 +12,8 @@
 
 @property BOOL debugging;
 
++(id)logger;
+
 -(void)log:(NSString *)str,...;
 -(void)debug:(NSString *)str,...;
 -(void)error:(NSString *)str,...;

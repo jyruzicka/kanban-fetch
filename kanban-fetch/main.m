@@ -19,7 +19,7 @@
 //Options
 #import <BRLOptionParser/BRLOptionParser.h>
 
-static const NSString *VERSION_NUMBER = @"1.1.0";
+static const NSString *VERSION_NUMBER = @"1.1.2";
 
 int main(int argc, const char * argv[])
 {
@@ -33,7 +33,7 @@ int main(int argc, const char * argv[])
         NSString *excludeFolders;
         
         
-        JRLogger *logger = [[JRLogger alloc] init];
+        JRLogger *logger = [JRLogger logger];
         
         // Initialize option parser
         BRLOptionParser *options = [BRLOptionParser new];
@@ -68,6 +68,12 @@ int main(int argc, const char * argv[])
         if (![JROmniFocus isRunning]) {
             [logger debug:@"Omnifocus isn't running. Quitting..."];
             exit(EXIT_SUCCESS);
+        }
+        
+        //Quit if not pro
+        if (![JROmniFocus isPro]) {
+            [logger error:@"You appear to be using OmniFocus Standard. kanban-fetch will only work with OmniFocus Pro. Sorry for the inconvenience!"];
+            exit(EXIT_FAILURE);
         }
             
         //Determine path to write to

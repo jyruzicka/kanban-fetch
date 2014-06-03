@@ -8,7 +8,15 @@
 
 #import "JRLogger.h"
 
+static JRLogger *kJRLogger;
+
 @implementation JRLogger
+
++(id)logger {
+    if (!kJRLogger)
+        kJRLogger = [[JRLogger alloc] init];
+    return kJRLogger;
+}
 
 -(void)log:(NSString *)str, ... {
     va_list args;
