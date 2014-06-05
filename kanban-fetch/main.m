@@ -19,7 +19,7 @@
 //Options
 #import <BRLOptionParser/BRLOptionParser.h>
 
-static const NSString *VERSION_NUMBER = @"1.1.2";
+static const NSString *VERSION_NUMBER = @"1.1.3";
 
 int main(int argc, const char * argv[])
 {
@@ -50,32 +50,21 @@ int main(int argc, const char * argv[])
             exit(EXIT_SUCCESS);
         }];
         
-        if (![options parseArgc:argc argv:argv error:&err]) {
-            [logger error:@"%s: %@",argv[0], err.localizedDescription];
-            exit(EXIT_FAILURE);
-        }
+        if (![options parseArgc:argc argv:argv error:&err])
+            [logger fail:@"%s: %@",argv[0], err.localizedDescription];
         
         if (debug)
             logger.debugging = YES;
         
         // Check for database location
-        if (!dbPath) {
-            [logger error: @"Option --out is required."];
-            exit(EXIT_FAILURE);
-        }
+        if (!dbPath) [logger fail: @"Option --out is required."];
 
         //Quit if OmniFocus isn't running
         if (![JROmniFocus isRunning]) {
             [logger debug:@"Omnifocus isn't running. Quitting..."];
             exit(EXIT_SUCCESS);
         }
-        
-        //Quit if not pro
-        if (![JROmniFocus isPro]) {
-            [logger error:@"You appear to be using OmniFocus Standard. kanban-fetch will only work with OmniFocus Pro. Sorry for the inconvenience!"];
-            exit(EXIT_FAILURE);
-        }
-            
+                    
         //Determine path to write to
         [logger debug:@"Setting database path to %@", dbPath];
         JRDatabaseManager.databasePath = dbPath;
@@ -107,14 +96,21 @@ int main(int argc, const char * argv[])
             exit(EXIT_FAILURE);
         }
         
-        err = [JRDatabaseManager writeProjects:kbProjects];
+        for (JRProject *p in kbProjects) {
+            [logger debug:@"  Writing project: %@",p.name];
+            err = [JRDatabaseManager writeProject:p];
+            if (err) break;
+        }
+        
         if (err) {
             [logger error:@"Error while writing projects:"];
             [logger error:@"%@", err.localizedDescription];
             [JRDatabaseManager close];
             exit(EXIT_FAILURE);
         }
+        [logger debug:@"Closing database connection..."];
         [JRDatabaseManager close];
+        [logger debug:@"Success! Ending..."];
     }
     exit(EXIT_SUCCESS);
 }
