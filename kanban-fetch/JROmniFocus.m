@@ -15,8 +15,8 @@
 
 static OmniFocusApplication* kJROF;
 static SBElementArray *kProjects, *kTasks;
-static NSString *kOF2ID = @"com.omnigroup.OmniFocus2";
-static NSString *kOF2AppStoreID = @"com.omnigroup.OmniFocus2.MacAppStore";
+static NSString *kOF2ID = @"com.omnigroup.OmniFocus";
+static NSString *kOF2AppStoreID = @"com.omnigroup.OmniFocus.MacAppStore";
 NSString *kJRAppIdentifier;
 
 @implementation JROmniFocus
