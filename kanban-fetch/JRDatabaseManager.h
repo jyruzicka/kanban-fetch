@@ -21,7 +21,6 @@
 +(void)setDatabasePath:(NSString *)path;
 
 #pragma mark - Database helpers
-+(NSError *)writeProjects:(NSArray *)projects;
 +(NSError *)writeProject:(JRProject *)project;
 +(NSError *)purgeDatabase;
 +(void)close;

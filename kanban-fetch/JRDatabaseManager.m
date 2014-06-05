@@ -42,18 +42,6 @@ static NSString *kJRDatabasePath;
 +(void)setDatabasePath:(NSString *)path {
     kJRDatabasePath = path.stringByExpandingTildeInPath;
 }
-
-
-#pragma mark - Databse helpers
-+(NSError *)writeProjects:(NSArray *)projects {
-    NSError *rErr;
-    for (JRProject *p in projects) {
-        rErr = [self writeProject:p];
-        if (rErr)
-            return rErr;
-    }
-    return nil;
-}
      
 +(NSError *)writeProject:(JRProject *)p {
     FMDatabase *db = [self database];

@@ -46,6 +46,15 @@ static JRLogger *kJRLogger;
     }
 }
 
+-(void)fail:(NSString *)str,... {
+    va_list args;
+    va_start(args,str);
+    NSString *newStr = [[NSString alloc] initWithFormat:str arguments:args];
+    va_end(args);
+    [self writeToLocation:@"/dev/stderr" withString:newStr];
+    exit(EXIT_FAILURE);
+}
+
 //Private
 -(void)writeToLocation:(NSString *)location withString:(NSString*)str {
     if (![str hasSuffix:@"\n"]) str = [str stringByAppendingString:@"\n"];
