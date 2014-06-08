@@ -21,10 +21,10 @@ NSArray *excludedFolders;
 -(int)daysDeferred {
   if (!_daysDeferred) {
     if ([self type] == kJRDeferredProject) {
-        NSDate *start = [[p deferDate] get];
+        NSDate *start = [[p startDate] get];
          //No start date on project, or start date is in the past
         if (!start || [start timeIntervalSinceNow] < 0)
-            start = [[[self tasks][0] deferDate] get];
+            start = [[[self tasks][0] startDate] get];
         
         NSTimeInterval i = [start timeIntervalSinceNow];
         _daysDeferred = i / (60 * 60 * 24);

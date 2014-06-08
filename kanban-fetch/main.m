@@ -19,7 +19,7 @@
 //Options
 #import <BRLOptionParser/BRLOptionParser.h>
 
-static const NSString *VERSION_NUMBER = @"1.1.3";
+static const NSString *VERSION_NUMBER = @"1.1.4";
 
 int main(int argc, const char * argv[])
 {
