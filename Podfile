@@ -1,4 +1,4 @@
 platform :osx, "10.9"
-xcodeproj "../kanban-fetch.xcodeproj"
-pod "FMDB"
+
+pod "JROFBridge", git: "https://github.com/jyruzicka/JROFBridge.git"
 pod "BRLOptionParser", :git => "https://github.com/barrelage/BRLOptionParser.git"

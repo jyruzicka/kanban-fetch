@@ -46,11 +46,11 @@
 		3D7D69EC193440310092BCD7 /* JRLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRLogger.m; sourceTree = "<group>"; };
 		3D7E7E93191056FC006A1737 /* SystemEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemEvents.h; sourceTree = "<group>"; };
 		3D87091C190C7DD8002F6A20 /* OmniFocus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OmniFocus.h; sourceTree = "<group>"; };
-		3DE0E7F4183A9EAC00DB752B /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3DE0E7F4183A9EAC00DB752B /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3DE0E7F6183AA0BE00DB752B /* JRDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRDatabaseManager.h; sourceTree = "<group>"; };
 		3DE0E7F7183AA0BE00DB752B /* JRDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRDatabaseManager.m; sourceTree = "<group>"; };
 		642F951E960F4A7B9B391891 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D28D50B670F54A8CB1278C7A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = "kanban-fetch/Pods/Pods.xcconfig"; sourceTree = "<group>"; };
+		D28D50B670F54A8CB1278C7A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
