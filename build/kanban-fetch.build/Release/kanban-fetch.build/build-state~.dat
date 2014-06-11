@@ -1,0 +1,162 @@
+Tkanban-fetch
+v6
+r1
+cCheck dependencies
+cPhaseScriptExecution Check\ Pods\ Manifest.lock /Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/Script-5DC14A4883774F1CA0D75B63.sh
+cProcessPCH /var/folders/w5/f7g4nqps0jq9x432t36h8tx80000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/kanban-fetch-Prefix-drasnxjbvytawfejkbhyviczkjml/kanban-fetch-Prefix.pch.pch kanban-fetch/kanban-fetch-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/main.o /Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/JRLogger.o /Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/JRLogger.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/jan/Programs/cocoa/kanban-fetch/build/Release/kanban-fetch normal x86_64
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+c000000005348892100000000000000AA
+t1397262625
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/SDKSettings.plist
+c00000000526C573F000000000000044C
+t1382831935
+s1100
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000531E499B00000000000001DE
+t1394493851
+s478
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000531E499B00000000000C9E38
+t1394493851
+s826936
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ScriptingBridge.framework/ScriptingBridge
+c00000000526C5742000000000000BB94
+t1382831938
+s48020
+
+N/Users/jan/Programs/cocoa/kanban-fetch/build/Release/kanban-fetch
+t2
+s0
+
+N/Users/jan/Programs/cocoa/kanban-fetch/build/Release/libPods.a
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/JRLogger.o
+t1402365784
+s16900
+
+N/Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/kanban-fetch.LinkFileList
+c000000005396675700000000000000F4
+t1402365783
+s244
+
+N/Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/main.o
+t1402365784
+s21424
+
+N/Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/Script-5DC14A4883774F1CA0D75B63.sh
+c00000000539667570000000000000103
+t1402365783
+s259
+
+N/Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/JRLogger.m
+c000000005390F5F8000000000000063A
+t1402009080
+s1594
+
+N/Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/kanban-fetch-Prefix.pch
+c000000005289D5C800000000000000B6
+t1384764872
+s182
+
+N/Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/main.m
+c000000005396628F0000000000000FEA
+t1402364559
+s4074
+
+N/var/folders/w5/f7g4nqps0jq9x432t36h8tx80000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/kanban-fetch-Prefix-drasnxjbvytawfejkbhyviczkjml/kanban-fetch-Prefix.pch.pch
+t1402365784
+s10499072
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies00abbbd79e46b941^187ac8d79e46b941^---0#1#1#--18"Check dependencies36"8AF6B3C0-5969-4FB3-9DFA-2CF75CEA1A0C-
+
+CCompileC build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/JRLogger.o /Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/JRLogger.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s424058584.594320
+e424058584.648140
+r1
+xCompileC
+xbuild/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/JRLogger.o
+x/Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/JRLogger.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/JRLogger.m
+d/Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/JRLogger.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile /Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/JRLogger.m203"[1mCompileC[0m build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/JRLogger.o [1mkanban-fetch/JRLogger.m[0m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler263998d89e46b941^92eca5d89e46b941^---0#0#1#-19%DVTDocumentLocation2@69"file:///Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/JRLogger.m0000000000000000^3639"[1mCompileC[0m build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/JRLogger.o [1mkanban-fetch/JRLogger.m[0m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jan/Programs/cocoa/kanban-fetch    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=181 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DCOCOAPODS=1 -DNS_BLOCK_ASSERTIONS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -fvisibility=hidden -Wno-sign-conversion -iquote /Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/kanban-fetch-generated-files.hmap -I/Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/kanban-fetch-own-target-headers.hmap -I/Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/kanban-fetch-all-target-headers.hmap -iquote /Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/kanban-fetch-project-headers.hmap -I/Users/jan/Programs/cocoa/kanban-fetch/build/Release/include -I/Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers -I/Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers/BRLOptionParser -I/Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers/FMDB -I/Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers/JROFBridge -I/Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/DerivedSources/x86_64 -I/Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/DerivedSources -F/Users/jan/Programs/cocoa/kanban-fetch/build/Release -isystem /Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers -isystem /Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers/BRLOptionParser -isystem /Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers/FMDB -isystem /Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers/JROFBridge -include /var/folders/w5/f7g4nqps0jq9x432t36h8tx80000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/kanban-fetch-Prefix-drasnxjbvytawfejkbhyviczkjml/kanban-fetch-Prefix.pch -MMD -MT dependencies -MF /Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/JRLogger.d --serialize-diagnostics /Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/JRLogger.dia -c /Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/JRLogger.m -o /Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/JRLogger.o36"642373D2-6378-4DFC-9CF5-B5D5EF6CF369-
+b4889E53D-653E-4228-8467-9CC667637753
+
+CCompileC build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/main.o /Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s424058584.594036
+e424058584.670313
+r1
+xCompileC
+xbuild/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/main.o
+x/Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/main.m
+d/Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/JRLogger.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Compile /Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/main.m195"[1mCompileC[0m build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/main.o [1mkanban-fetch/main.m[0m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerae2998d89e46b941^c499abd89e46b941^---0#0#1#-19%DVTDocumentLocation2@65"file:///Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/main.m0000000000000000^3615"[1mCompileC[0m build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/main.o [1mkanban-fetch/main.m[0m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jan/Programs/cocoa/kanban-fetch    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=181 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DCOCOAPODS=1 -DNS_BLOCK_ASSERTIONS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -fvisibility=hidden -Wno-sign-conversion -iquote /Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/kanban-fetch-generated-files.hmap -I/Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/kanban-fetch-own-target-headers.hmap -I/Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/kanban-fetch-all-target-headers.hmap -iquote /Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/kanban-fetch-project-headers.hmap -I/Users/jan/Programs/cocoa/kanban-fetch/build/Release/include -I/Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers -I/Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers/BRLOptionParser -I/Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers/FMDB -I/Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers/JROFBridge -I/Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/DerivedSources/x86_64 -I/Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/DerivedSources -F/Users/jan/Programs/cocoa/kanban-fetch/build/Release -isystem /Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers -isystem /Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers/BRLOptionParser -isystem /Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers/FMDB -isystem /Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers/JROFBridge -include /var/folders/w5/f7g4nqps0jq9x432t36h8tx80000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/kanban-fetch-Prefix-drasnxjbvytawfejkbhyviczkjml/kanban-fetch-Prefix.pch -MMD -MT dependencies -MF /Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/main.dia -c /Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/main.m -o /Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/main.o36"CB257BE7-9C5B-46EA-A658-C87E5419A5D8-
+b4889E53D-653E-4228-8467-9CC667637753
+
+CGenerateDSYMFile /Users/jan/Programs/cocoa/kanban-fetch/build/Release/kanban-fetch.dSYM /Users/jan/Programs/cocoa/kanban-fetch/build/Release/kanban-fetch
+r0
+
+CLd /Users/jan/Programs/cocoa/kanban-fetch/build/Release/kanban-fetch normal x86_64
+s424058584.671159
+e424058584.683127
+r0
+xLd
+x/Users/jan/Programs/cocoa/kanban-fetch/build/Release/kanban-fetch
+xnormal
+xx86_64
+d/Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/kanban-fetch.LinkFileList
+old: library not found for -lPods
+oclang: error: linker command failed with exit code 1 (use -v to see invocation)
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Link /Users/jan/Programs/cocoa/kanban-fetch/build/Release/kanban-fetch51"[1mLd[0m build/Release/kanban-fetch normal x86_6400e1abd89e46b941^2ee7aed89e46b941^-113"ld: library not found for -lPodsclang: error: linker command failed with exit code 1 (use -v to see invocation)2(21%IDEActivityLogMessage2@28"Library not found for -lPods-424058584#0#33#-0#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@65"Linker command failed with exit code 1 (use -v to see invocation)-424058584#33#80#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--0#0#1#--996"[1mLd[0m build/Release/kanban-fetch normal x86_64    cd /Users/jan/Programs/cocoa/kanban-fetch    export MACOSX_DEPLOYMENT_TARGET=10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/jan/Programs/cocoa/kanban-fetch/build/Release -F/Users/jan/Programs/cocoa/kanban-fetch/build/Release -filelist /Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/kanban-fetch.LinkFileList -mmacosx-version-min=10.9 -ObjC -lsqlite3 -fobjc-arc -fobjc-link-runtime -framework ScriptingBridge -framework Foundation -lPods -Xlinker -dependency_info -Xlinker /Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/Objects-normal/x86_64/kanban-fetch_dependency_info.dat -o /Users/jan/Programs/cocoa/kanban-fetch/build/Release/kanban-fetch36"D7993360-D887-467E-8BC9-63E77C7DB809-
+b4889E53D-653E-4228-8467-9CC667637753
+
+CPhaseScriptExecution Check\ Pods\ Manifest.lock /Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/Script-5DC14A4883774F1CA0D75B63.sh
+s424058583.787772
+e424058583.809327
+r1
+xPhaseScriptExecution
+xCheck Pods Manifest.lock
+x/Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/Script-5DC14A4883774F1CA0D75B63.sh
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Run custom shell script 'Check Pods Manifest.lock'142"[1mPhaseScriptExecution[0m Check\ Pods\ Manifest.lock build/kanban-fetch.build/Release/kanban-fetch.build/Script-5DC14A4883774F1CA0D75B63.sh174acad79e46b941^0e30cfd79e46b941^---0#0#1#--330"[1mPhaseScriptExecution[0m Check\ Pods\ Manifest.lock build/kanban-fetch.build/Release/kanban-fetch.build/Script-5DC14A4883774F1CA0D75B63.sh    cd /Users/jan/Programs/cocoa/kanban-fetch    /bin/sh -c /Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/Script-5DC14A4883774F1CA0D75B63.sh36"83D3C788-A9E0-4AAF-A335-85BF5E314F80-
+b4889E53D-653E-4228-8467-9CC667637753
+
+CPhaseScriptExecution Copy\ Pods\ Resources /Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/Script-2F363C1572B74767A36489C9.sh
+r0
+
+CProcessPCH /var/folders/w5/f7g4nqps0jq9x432t36h8tx80000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/kanban-fetch-Prefix-drasnxjbvytawfejkbhyviczkjml/kanban-fetch-Prefix.pch.pch kanban-fetch/kanban-fetch-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s424058583.810847
+e424058584.593330
+r1
+xProcessPCH
+x/var/folders/w5/f7g4nqps0jq9x432t36h8tx80000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/kanban-fetch-Prefix-drasnxjbvytawfejkbhyviczkjml/kanban-fetch-Prefix.pch.pch
+xkanban-fetch/kanban-fetch-Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/kanban-fetch-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Precompile kanban-fetch/kanban-fetch-Prefix.pch320"[1mProcessPCH[0m /var/folders/w5/f7g4nqps0jq9x432t36h8tx80000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/kanban-fetch-Prefix-drasnxjbvytawfejkbhyviczkjml/kanban-fetch-Prefix.pch.pch kanban-fetch/kanban-fetch-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilere8bfcfd79e46b941^36e497d89e46b941^---0#0#1#-19%DVTDocumentLocation2@82"file:///Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/kanban-fetch-Prefix.pch0000000000000000^3785"[1mProcessPCH[0m /var/folders/w5/f7g4nqps0jq9x432t36h8tx80000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/kanban-fetch-Prefix-drasnxjbvytawfejkbhyviczkjml/kanban-fetch-Prefix.pch.pch kanban-fetch/kanban-fetch-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jan/Programs/cocoa/kanban-fetch    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=181 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DCOCOAPODS=1 -DNS_BLOCK_ASSERTIONS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -fvisibility=hidden -Wno-sign-conversion -iquote /Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/kanban-fetch-generated-files.hmap -I/Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/kanban-fetch-own-target-headers.hmap -I/Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/kanban-fetch-all-target-headers.hmap -iquote /Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/kanban-fetch-project-headers.hmap -I/Users/jan/Programs/cocoa/kanban-fetch/build/Release/include -I/Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers -I/Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers/BRLOptionParser -I/Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers/FMDB -I/Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers/JROFBridge -I/Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/DerivedSources/x86_64 -I/Users/jan/Programs/cocoa/kanban-fetch/build/kanban-fetch.build/Release/kanban-fetch.build/DerivedSources -F/Users/jan/Programs/cocoa/kanban-fetch/build/Release -isystem /Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers -isystem /Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers/BRLOptionParser -isystem /Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers/FMDB -isystem /Users/jan/Programs/cocoa/kanban-fetch/Pods/Headers/JROFBridge --serialize-diagnostics /var/folders/w5/f7g4nqps0jq9x432t36h8tx80000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/kanban-fetch-Prefix-drasnxjbvytawfejkbhyviczkjml/kanban-fetch-Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/w5/f7g4nqps0jq9x432t36h8tx80000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/kanban-fetch-Prefix-drasnxjbvytawfejkbhyviczkjml/kanban-fetch-Prefix.pch.d -c /Users/jan/Programs/cocoa/kanban-fetch/kanban-fetch/kanban-fetch-Prefix.pch -o /var/folders/w5/f7g4nqps0jq9x432t36h8tx80000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/kanban-fetch-Prefix-drasnxjbvytawfejkbhyviczkjml/kanban-fetch-Prefix.pch.pch36"1A251702-974A-494D-AAD8-57AB4D11B5FF-
+b4889E53D-653E-4228-8467-9CC667637753
+

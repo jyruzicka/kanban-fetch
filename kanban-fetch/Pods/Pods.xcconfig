@@ -1,5 +1,0 @@
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/BRLOptionParser" "${PODS_ROOT}/Headers/FMDB"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/BRLOptionParser" -isystem "${PODS_ROOT}/Headers/FMDB"
-OTHER_LDFLAGS = -ObjC -lsqlite3
-PODS_ROOT = ${SRCROOT}/kanban-fetch/Pods

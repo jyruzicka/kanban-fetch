@@ -63,7 +63,7 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "foo.db"
+            argument = "--out=foo.db"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

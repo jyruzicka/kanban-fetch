@@ -17,6 +17,5 @@
 -(void)log:(NSString *)str,...;
 -(void)debug:(NSString *)str,...;
 -(void)error:(NSString *)str,...;
-
 -(void)fail:(NSString *)str,...;
 @end
