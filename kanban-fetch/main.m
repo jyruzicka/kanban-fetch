@@ -12,14 +12,14 @@
 #import "JRLogger.h"
 
 //Omnifocus stuff
-#import "JROmniFocus.h"
-#import "JRProject.h"
-#import "JRDatabaseManager.h"
+#import <JROFBridge/JROmniFocus.h>
+#import <JROFBridge/JRProject.h>
+#import <JROFBridge/JRDatabase.h>
 
 //Options
 #import <BRLOptionParser/BRLOptionParser.h>
 
-static const NSString *VERSION_NUMBER = @"1.1.4";
+static const NSString *VERSION_NUMBER = @"2.1.0";
 
 int main(int argc, const char * argv[])
 {
@@ -60,57 +60,71 @@ int main(int argc, const char * argv[])
         if (!dbPath) [logger fail: @"Option --out is required."];
 
         //Quit if OmniFocus isn't running
-        if (![JROmniFocus isRunning]) {
+        JROmniFocus *of = [JROmniFocus instance];
+        if (!of) {
             [logger debug:@"Omnifocus isn't running. Quitting..."];
             exit(EXIT_SUCCESS);
         }
-                    
+        
+        if (debug) {
+            NSString *vers;
+            switch(of.version) {
+                case JROmniFocusVersion1:
+                    vers = @"1";
+                    break;
+                case JROmniFocusVersion2:
+                    vers = @"2 Standard";
+                    break;
+                default:
+                    vers = @"2 Pro";
+            }
+            	
+            [logger debug: @"OmniFocus version detected: OmniFocus %@",vers];
+        }
+        
+        //Quit if not pro
+        if (!of.version == JROmniFocusVersion2) [logger fail:@"You appear to be using OmniFocus 2 Standard. kanban-fetch will only work with OmniFocus 2 Pro. If you have just purchased OmniFocus Pro, try restarting OmniFocus.\nSorry for the inconvenience!"];
+        
         //Determine path to write to
         [logger debug:@"Setting database path to %@", dbPath];
-        JRDatabaseManager.databasePath = dbPath;
+        JRDatabase *db = [JRDatabase databaseWithLocation:dbPath type:JRDatabaseProjects];
+        
+        if (!db.canExist)
+            [logger fail:@"Cannot create database at location: %@",dbPath];
         
         //Determine folder exclusion
         if (excludeFolders) {
             [logger debug:@"Excluding folders: %@",excludeFolders];
-            [JRProject excludeFolders:[excludeFolders componentsSeparatedByString:@","]];
+            of.excludedFolders = [excludeFolders componentsSeparatedByString:@","];
         }
         
-        // Fetch *all* current projects
-        SBElementArray *allProjects = [JROmniFocus projects];
-        [logger debug:@"Fetched %lu projects from OmniFocus.", [allProjects count]];
-        NSMutableArray *kbProjects = [NSMutableArray arrayWithCapacity:[allProjects count]];
-    
-        for (OmniFocusProject *p in allProjects) {
-            JRProject *kbp = [JRProject projectWithProject:p];
-            if ([kbp isReportable])
-                [kbProjects addObject: kbp];
-        }
-        [logger debug:@"Generated %lu reportable projects.", [kbProjects count]];
+        // Fetch completed projects
+        NSMutableArray *projects = [NSMutableArray array];
+        [of eachProject:^(JRProject *p){ if (![p.ancestry isEqualToString:@""]) [projects addObject:p]; }];
+        [logger debug:@"Generated %lu reportable projects.", projects.count];
         
         // Now save
-        err = [JRDatabaseManager purgeDatabase];
+        [logger debug:@"Purging and recreating database as required..."];
+        err = [db purgeDatabase];
         if (err) {
             [logger error:@"Error while purging database:"];
             [logger error:@"%@",err.localizedDescription];
-            [JRDatabaseManager close];
             exit(EXIT_FAILURE);
         }
         
-        for (JRProject *p in kbProjects) {
+        [logger debug:@"Writing projects:"];
+        for (JRProject *p in projects) {
             [logger debug:@"  Writing project: %@",p.name];
-            err = [JRDatabaseManager writeProject:p];
+            err = [db saveProject:p];
             if (err) break;
         }
         
         if (err) {
             [logger error:@"Error while writing projects:"];
             [logger error:@"%@", err.localizedDescription];
-            [JRDatabaseManager close];
             exit(EXIT_FAILURE);
         }
-        [logger debug:@"Closing database connection..."];
-        [JRDatabaseManager close];
-        [logger debug:@"Success! Ending..."];
+        [logger debug:@"Success!"];
     }
     exit(EXIT_SUCCESS);
 }
