@@ -5,7 +5,7 @@ PODS:
   - FMDB/common (2.1)
   - FMDB/standard (2.1):
     - FMDB/common
-  - JROFBridge (0.0.1):
+  - JROFBridge (0.2.1):
     - FMDB (~> 2.1)
 
 DEPENDENCIES:
@@ -21,6 +21,6 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   BRLOptionParser: e034c1be1a1515e9b22e752eacb8edd9abb0df4d
   FMDB: 3fd5aaf632ca4ed39e3f101e0398504e6d5b0918
-  JROFBridge: 713f62ac803545bd865f2624c7e5b77d11139134
+  JROFBridge: 53c28906714ff53264f130fbcc9b1a537bea7006
 
 COCOAPODS: 0.33.1
