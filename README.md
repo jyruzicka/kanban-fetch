@@ -1,8 +1,8 @@
-## kanban-fetch
+# kanban-fetch
 
 Fetches data from OmniFocus.app for display in a kanban-like system.
 
-### How do I install it?
+## Installation
 
 1. Download or `clone` it:
 
@@ -15,7 +15,7 @@ git clone https://github.com/jyruzicka/kanban-fetch.git
 
 Alternatively, grab the binary [from 1klb](http://1klb.com/projects/kanban-fetch).
 
-### How do I run it?
+## Usage
 
 Navigate to it in terminal and run:
 
@@ -38,3 +38,10 @@ Add it to your LaunchAgents. I recommend [Lingon](http://www.peterborgapps.com/l
 ### What do I do once I've got a database of projects?
 
 That's entirely up to you, but I recommend checking out [this project](https://github.com/jyruzicka/kanban) for an example.
+
+## Changelog
+
+### 2.1.3 - 2014-06-16
+
+* Changelog started!
+* Application now logs projects that are not contained within folders. To remove these projects, use the "-r" flag.

@@ -19,7 +19,7 @@
 //Options
 #import <BRLOptionParser/BRLOptionParser.h>
 
-static const NSString *VERSION_NUMBER = @"2.1.1";
+static const NSString *VERSION_NUMBER = @"2.1.3";
 
 int main(int argc, const char * argv[])
 {
@@ -29,6 +29,7 @@ int main(int argc, const char * argv[])
         
         //BRLOP arguments
         BOOL debug=NO;
+        BOOL disregardRoot=NO;
         NSString *dbPath;
         NSString *excludeFolders;
         
@@ -41,6 +42,7 @@ int main(int argc, const char * argv[])
         [options setBanner: @"kanban-fetch for OmniFocus 1, Version %@\n\nusage: %s [--debug] [--exclude=\"exclude1,...\"] --out=DATABASE\n       %s --help\n",VERSION_NUMBER,argv[0], argv[0]];
         
         [options addOption:"debug" flag:'d' description:@"Activates debug mode, with appropriate output" value:&debug];
+        [options addOption:"exclude-root-projects" flag:'r' description:@"Don't record projects that have no parent folder (i.e. exist at root.)" value:&disregardRoot];
         [options addOption:"out" flag:'o' description:@"Name of database. Required" argument:&dbPath];
         [options addOption:"exclude" flag:'x' description:@"Projects in folders with this name will be excluded from export. Separate folders by commas." argument:&excludeFolders];
         
@@ -101,7 +103,7 @@ int main(int argc, const char * argv[])
         
         // Fetch completed projects
         NSMutableArray *projects = [NSMutableArray array];
-        [of eachProject:^(JRProject *p){ if (![p.ancestry isEqualToString:@""]) [projects addObject:p]; }];
+        [of eachProject:^(JRProject *p){ if (!(disregardRoot && [p.ancestry isEqualToString:@""])) [projects addObject:p]; }];
         [logger debug:@"Generated %lu reportable projects.", projects.count];
         
         // Now save
