@@ -9,21 +9,22 @@
 /* Begin PBXBuildFile section */
 		3D641CDE183A0D480097FCEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D641CDD183A0D480097FCEB /* Foundation.framework */; };
 		3D641CE1183A0D480097FCEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D641CE0183A0D480097FCEB /* main.m */; };
-		3D641CE5183A0D480097FCEB /* kanban_fetch.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D641CE4183A0D480097FCEB /* kanban_fetch.1 */; };
+		3D641CE5183A0D480097FCEB /* kanban_fetch.1 in Copy Files */ = {isa = PBXBuildFile; fileRef = 3D641CE4183A0D480097FCEB /* kanban_fetch.1 */; };
 		3D641CF6183A0FE90097FCEB /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D641CF5183A0FE90097FCEB /* ScriptingBridge.framework */; };
 		3D7D69ED193440310092BCD7 /* JRLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D69EC193440310092BCD7 /* JRLogger.m */; };
 		D06866BA4282437F836F0040 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 642F951E960F4A7B9B391891 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3D641CD8183A0D480097FCEB /* CopyFiles */ = {
+		3D641CD8183A0D480097FCEB /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				3D641CE5183A0D480097FCEB /* kanban_fetch.1 in CopyFiles */,
+				3D641CE5183A0D480097FCEB /* kanban_fetch.1 in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -115,7 +116,7 @@
 				5DC14A4883774F1CA0D75B63 /* Check Pods Manifest.lock */,
 				3D641CD6183A0D480097FCEB /* Sources */,
 				3D641CD7183A0D480097FCEB /* Frameworks */,
-				3D641CD8183A0D480097FCEB /* CopyFiles */,
+				3D641CD8183A0D480097FCEB /* Copy Files */,
 				2F363C1572B74767A36489C9 /* Copy Pods Resources */,
 			);
 			buildRules = (

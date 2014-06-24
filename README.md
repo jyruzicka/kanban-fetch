@@ -41,6 +41,15 @@ That's entirely up to you, but I recommend checking out [this project](https://g
 
 ## Changelog
 
+### 2.1.5 - 2014-06-24
+
+* Logging now works even when the `-d` flag isn't set
+* Logs append to the beginning of a file - most recent log is first
+
+### 2.1.4 - 2014-06-19
+
+* Added the `-l` flag for logging to a file.
+
 ### 2.1.3 - 2014-06-16
 
 * Changelog started!

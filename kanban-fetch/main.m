@@ -19,7 +19,7 @@
 //Options
 #import <BRLOptionParser/BRLOptionParser.h>
 
-static const NSString *VERSION_NUMBER = @"2.1.3";
+static const NSString *VERSION_NUMBER = @"2.1.5";
 
 int main(int argc, const char * argv[])
 {
@@ -32,6 +32,7 @@ int main(int argc, const char * argv[])
         BOOL disregardRoot=NO;
         NSString *dbPath;
         NSString *excludeFolders;
+        NSString *logPath;
         
         
         JRLogger *logger = [JRLogger logger];
@@ -39,10 +40,11 @@ int main(int argc, const char * argv[])
         //------------------------------------------------------------------------------
         // Initialize option parser
         BRLOptionParser *options = [BRLOptionParser new];
-        [options setBanner: @"kanban-fetch for OmniFocus 1, Version %@\n\nusage: %s [--debug] [--exclude=\"exclude1,...\"] --out=DATABASE\n       %s --help\n",VERSION_NUMBER,argv[0], argv[0]];
+        [options setBanner: @"kanban-fetch for OmniFocus 1, Version %@\n\nusage: %s [--debug] [--exclude=\"exclude1,...\"] [--log=FILE] [--exclude-root-projects] --out=DATABASE\n       %s --help\n",VERSION_NUMBER,argv[0], argv[0]];
         
         [options addOption:"debug" flag:'d' description:@"Activates debug mode, with appropriate output" value:&debug];
         [options addOption:"exclude-root-projects" flag:'r' description:@"Don't record projects that have no parent folder (i.e. exist at root.)" value:&disregardRoot];
+        [options addOption:"log" flag:'l' description:@"Log output to this file" argument:&logPath];
         [options addOption:"out" flag:'o' description:@"Name of database. Required" argument:&dbPath];
         [options addOption:"exclude" flag:'x' description:@"Projects in folders with this name will be excluded from export. Separate folders by commas." argument:&excludeFolders];
         
@@ -59,6 +61,19 @@ int main(int argc, const char * argv[])
         if (debug)
             logger.debugging = YES;
         
+        //Run debug!
+        [logger debug:@"Process started at %@", [NSDate date].description];
+        NSMutableArray *nsargv = [NSMutableArray array];
+        for (int x=0;x<argc;x++)
+            [nsargv addObject: [NSString stringWithCString:argv[x] encoding:NSUTF8StringEncoding]];
+        
+        [logger debug:@"Program called: %@",[nsargv componentsJoinedByString:@" "]];
+        
+        if (logPath) {
+            [logger debug:@"Data logged to: %@",logPath];
+            logger.logfile = logPath;
+        }
+        
         // Check for database location
         if (!dbPath) [logger fail: @"Option --out is required."];
 
@@ -66,6 +81,7 @@ int main(int argc, const char * argv[])
         JROmniFocus *of = [JROmniFocus instance];
         if (!of) {
             [logger debug:@"Omnifocus isn't running. Quitting..."];
+            [logger writeBufferToFile];
             exit(EXIT_SUCCESS);
         }
         
@@ -128,7 +144,9 @@ int main(int argc, const char * argv[])
             exit(EXIT_FAILURE);
         }
         [logger debug:@"Success!"];
+        [logger writeBufferToFile];
     }
+    
     exit(EXIT_SUCCESS);
 }
 

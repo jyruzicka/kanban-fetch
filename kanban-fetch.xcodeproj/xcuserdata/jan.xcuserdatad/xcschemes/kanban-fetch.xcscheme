@@ -81,6 +81,10 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
+            argument = "--log=&quot;log.txt&quot;"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "-x &quot;Recurring Tasks,Template&quot;"
             isEnabled = "YES">
          </CommandLineArgument>

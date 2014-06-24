@@ -11,6 +11,8 @@
 @interface JRLogger : NSObject
 
 @property BOOL debugging;
+@property NSString *logfile;
+@property NSMutableString *logBuffer;
 
 +(id)logger;
 
@@ -18,4 +20,6 @@
 -(void)debug:(NSString *)str,...;
 -(void)error:(NSString *)str,...;
 -(void)fail:(NSString *)str,...;
+
+-(void)writeBufferToFile;
 @end
