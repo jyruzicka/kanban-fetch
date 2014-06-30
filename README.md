@@ -41,6 +41,15 @@ That's entirely up to you, but I recommend checking out [this project](https://g
 
 ## Changelog
 
+### 2.1.7 - 2014-06-30
+
+* Updated JROFBridge to fix the version check (finally)
+
+### 2.1.6 - 2014-06-26
+
+* Updated JROFBridge
+* Fixed version check
+
 ### 2.1.5 - 2014-06-24
 
 * Logging now works even when the `-d` flag isn't set
