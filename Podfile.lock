@@ -10,13 +10,13 @@ PODS:
 
 DEPENDENCIES:
   - BRLOptionParser (from `https://github.com/barrelage/BRLOptionParser.git`)
-  - JROFBridge (from `/Users/jan/Programs/cocoa/JROFBridge`)
+  - JROFBridge (from `https://github.com/jyruzicka/JROFBridge.git`)
 
 EXTERNAL SOURCES:
   BRLOptionParser:
     :git: https://github.com/barrelage/BRLOptionParser.git
   JROFBridge:
-    :path: /Users/jan/Programs/cocoa/JROFBridge
+    :git: https://github.com/jyruzicka/JROFBridge.git
 
 SPEC CHECKSUMS:
   BRLOptionParser: e034c1be1a1515e9b22e752eacb8edd9abb0df4d
